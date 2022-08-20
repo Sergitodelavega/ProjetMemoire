@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
+Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
+Route::get('/memoires', 'App\Http\Controllers\MemoireController@index')->name('memoire.index');
+Route::get('/memoires/{id}', 'App\Http\Controllers\MemoireController@show')->name('memoire.show');
+
+Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name('admin.home.index');
+Auth::routes();
+
