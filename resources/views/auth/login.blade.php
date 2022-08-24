@@ -36,8 +36,8 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
+                                        <a class="btn btn-primary btn-user btn-block">
+                                            {{ __('Login') }}
                                         </a>
                                         <!--
                                             <hr>

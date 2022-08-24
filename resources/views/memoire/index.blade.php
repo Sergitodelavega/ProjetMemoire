@@ -9,17 +9,17 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Theme</th>
-                <th scope="col">Option</th>
+                <th scope="col">Filière</th>
+                <th scope="col">Ecole</th>
                 <th scope="col">Fichier</th>
             </tr>
             </thead>
         <tbody>
             @foreach ($viewData["memoires"] as $memoire)
           <tr>
-            <th scope="row">{{ $memoire["id"] }}</th>
-            <td><a href="{{ route('memoire.show', ['id'=>$memoire["id"]]) }}">{{ $memoire["theme"] }}</a></td>
-            <td>{{ $memoire["option"] }}</td>
-            <td><a href="">{{ $memoire["fichier"] }}</a></td>
+            <th scope="row">{{ $memoire->getId() }}</th>
+            <td><a href="{{ route('memoire.show', ['id'=>$memoire->getId()]) }}">{{ $memoire->getTheme() }}</a></td>
+            <td><a href="">{{ $memoire->getPdf() }}</a></td>
           </tr>
           @endforeach
         </tbody>

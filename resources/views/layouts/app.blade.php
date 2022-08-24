@@ -66,7 +66,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Memoires</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('memoire.index') }}">Memoires</a></li>
           <li><a class="nav-link scrollto" href="#about">Publier</a></li>
           <li><a class="nav-link scrollto" href="#services">Rechercher</a></li>
           <li><a class="nav-link scrollto " href="{{ route('home.about') }}">Faq</a></li>

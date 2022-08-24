@@ -38,8 +38,8 @@
                                         id="exampleRepeatPassword" placeholder="Repeat Password">
                                 </div>
                             </div>
-                            <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                Register Account
+                            <a class="btn btn-primary btn-user btn-block">
+                                {{ __('Register Account') }}
                             </a>
                             <!--
                             <hr>

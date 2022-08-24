@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
+Route::get('/index1', 'App\Http\Controllers\HomeController@index1')->name('home.index1');
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
 Route::get('/memoires', 'App\Http\Controllers\MemoireController@index')->name('memoire.index');
 Route::get('/memoires/{id}', 'App\Http\Controllers\MemoireController@show')->name('memoire.show');
 
 Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name('admin.home.index');
+Route::get('/admin/memoires', 'App\Http\Controllers\Admin\AdminMemoireController@index')->name('admin.memoire.index');
 Auth::routes();
 
